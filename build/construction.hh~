@@ -1,0 +1,17 @@
+#ifndef CONSTRUCTION_HH
+#define CONSTRUCTION_HH
+
+#include "G4SystemOfUnits.hh" // includes more  units for meters since G4 runs in mm - change units with <#>*<unit>
+/*
+Author: Frank
+*/
+
+class MyDetectorConstruction : public G4UserDetectorConstruction
+{
+	MyDetectorConstruction();
+	~MyDetectorConstruction();
+
+	virtual G4VPhysicalVolume *Construct();
+}
+
+#endif
