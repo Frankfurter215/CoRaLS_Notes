@@ -13,7 +13,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 	track->SetTrackStatus(fStopAndKill);
 
 	G4StepPoint *preStepPoint = aStep->GetPreStepPoint(); //Gets point where photon initially enters the sensitive volume
-	G4StepPoint *postStepPoint = aStep->GetPostStepPoint(); //info from where photon leaves detector
+	//G4StepPoint *postStepPoint = aStep->GetPostStepPoint(); //info from where photon leaves detector
 
 	G4ThreeVector posPhoton = preStepPoint->GetPosition();
 	G4ThreeVector momPhoton = preStepPoint->GetMomentum();
@@ -27,14 +27,14 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 
 	G4int copyNo = touchable->GetCopyNumber(); //gets the number of the detector defined by i+j*10
 
-	//G4cout << "Copy Number:" << copyNo << G4endl; 
+	G4cout << "Copy Number:" << copyNo << G4endl; 
 
 	G4VPhysicalVolume *physVol = touchable->GetVolume();
 	G4ThreeVector posDetector =  physVol->GetTranslation();
 
-	//#ifndef G4MULTITHREADED
-	//G4cout << "Detector Position:" << posDetector << G4endl; //gives the position of the detector that detected a hit
-	//#endif
+	#ifndef G4MULTITHREADED
+	G4cout << "Detector Position:" << posDetector << G4endl; //gives the position of the detector that detected a hit
+	#endif
 
 	G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
