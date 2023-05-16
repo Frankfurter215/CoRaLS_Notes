@@ -6,7 +6,9 @@
 #include "G4SystemOfUnits.hh"
 #include "G4ParticleTable.hh"
 #include "G4Geantino.hh"
+#include "G4ChargedGeantino.hh"
 #include "G4IonTable.hh"
+#include "Randomize.hh"
 
 class MyPrimaryGenerator : public G4VUserPrimaryGeneratorAction
 {

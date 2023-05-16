@@ -4,9 +4,10 @@
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
-	isCherenkov = true;
+	isCherenkov = false;
 	isScintillator= false;
-
+	isAtmosphere = true;
+	
 	nCols = 100;
 	nRows = 100;
 
@@ -16,13 +17,13 @@ MyDetectorConstruction::MyDetectorConstruction()
 	fMessenger->DeclareProperty("nRows", nRows, "Number of Rows");
 	fMessenger->DeclareProperty("Cherenkov", isCherenkov, "Toggle Cherenkov Setup");
 	fMessenger->DeclareProperty("Scintillator", isScintillator, "Toggle Scintillator Setup");
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
+
 
 	DefineMaterials();
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
-	xWorld = 0.5*m;
-	yWorld = 0.5*m; //defining x and y width of the world volume in variables
-	zWorld = 0.5*m;
+
+	xWorld = 40.*km;
+	yWorld = 40.*km; //defining x and y width of the world volume in variables
+	zWorld = 20.*km;
 
 }
 
@@ -68,17 +69,38 @@ endnew*/
 	Aerogel->SetMaterialPropertiesTable(mptAerogel);
 
 	worldMat->SetMaterialPropertiesTable(mptWorld);
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
+
 	NaI = new G4Material("NaI", 3.67*g/cm3, 2);
 	NaI->AddElement(nist->FindOrBuildElement("Na"), 1);
 	NaI->AddElement(nist->FindOrBuildElement("I"), 1);
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
-/*	I = nist->FindOrBuildElement("I");
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
-	NaI->AddElement(Na, 1);
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
-	NaI->AddElement(I, 1);
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;*/
+
+	I = nist->FindOrBuildElement("I");
+
+	G4double density0 = 1.29*kg/m3;
+	G4double aN = 14.01*g/mole;
+	G4double aO = 16.00*g/mole;
+	
+	N = new G4Element("Nitrogen", "N", 7, aN);
+	O = new G4Element("Oxygen", "O", 8, aO);
+	
+	G4double f =3;
+	G4double R = 8.31446261815; 
+	G4double g0 = 9.81;
+	G4double kappa = (f+2)/f;
+	G4double T = 293.15;
+	G4double M = (0.3*aO + 0.7*aN)/1000.;
+	
+	for(G4int i = 0; i<10; i++) 
+
+	{ 
+		std::stringstream stri; 
+		stri << i; //converts i into string 
+		G4double h = 40e3/10.*i; //calculates the height at each layer 
+		G4double density = density0*pow((1-(kappa)/kappa*M*g0*h/(R*T)), (1/(kappa-1))); 
+		Air[i] = new G4Material("G4_AIR_"+stri.str(), density, 2);  
+		Air[i]->AddElement(N, 70*perCent); 
+		Air[i]->AddElement(O, 30*perCent); 
+	} 
 }
 
 void MyDetectorConstruction::ConstructCherenkov()
@@ -118,6 +140,26 @@ void MyDetectorConstruction::ConstructScintillator()
 	physScintillator = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicScintillator, "physScintillator", logicWorld, false, 0, true);
 }
 
+void MyDetectorConstruction::ConstructSDandField()
+{
+	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
+
+	if(isCherenkov)
+		logicDetector->SetSensitiveDetector(sensDet);
+
+}
+
+void MyDetectorConstruction::ConstructAtmosphere() 
+{ 
+  solidAtmosphere = new G4Box("solidAtmosphere", xWorld, yWorld, zWorld/10.); //zworld/10 b/c we want 10 layers 
+
+  for(G4int i = 0; i < 10; i++) 
+  { 
+     logicAtmosphere[i] = new G4LogicalVolume(solidAtmosphere, Air[i], "logicAtmosphere"); 
+     physAtmosphere[i] = new G4PVPlacement(0, G4ThreeVector(0, 0, zWorld/10.*2*i - zWorld +zWorld/10.), logicAtmosphere[i], "physAtmosphere", logicWorld, false, i, true); 
+  } 
+
+} 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
 
@@ -131,14 +173,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 		ConstructCherenkov();
 	if(isScintillator)
 		ConstructScintillator();
+	if(isAtmosphere)
+		ConstructAtmosphere();
 	return physWorld;
-}
-
-void MyDetectorConstruction::ConstructSDandField()
-{
-	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
-
-	if(isCherenkov)
-		logicDetector->SetSensitiveDetector(sensDet);
-
 }

@@ -23,6 +23,9 @@ public:
 //	G4LogicalVolume *GetScoringVolume() const { return fScoringVolume; } //I think this is about det efficiency but trying it for debugging
 
 	virtual G4VPhysicalVolume *Construct();
+	void ConstructCherenkov();
+	void ConstructScintillator();
+	void ConstructAtmosphere();
 
 private:
 	G4LogicalVolume *logicDetector;
@@ -30,22 +33,19 @@ private:
 
 	G4int nCols, nRows;
 
-	G4Box *solidWorld, *solidRadiator, *solidDetector, *solidScintillator;
-	G4LogicalVolume *logicWorld, *logicRadiator, *logicScintillator;
-	G4VPhysicalVolume *physWorld, *physRadiator, *physDetector, *physScintillator;
+	G4Box *solidWorld, *solidRadiator, *solidDetector, *solidScintillator, *solidAtmosphere;
+	G4LogicalVolume *logicWorld, *logicRadiator, *logicScintillator, *logicAtmosphere[10];
+	G4VPhysicalVolume *physWorld, *physRadiator, *physDetector, *physScintillator, *physAtmosphere[10];
 
 	G4GenericMessenger *fMessenger;
 
-	G4Material *SiO2, *water, *Aerogel, *worldMat, *NaI;
-	G4Element *C, *Na, *I;
+	G4Material *SiO2, *water, *Aerogel, *worldMat, *NaI, *Air[10];
+	G4Element *C, *Na, *I, *N, *O;
 
 	void DefineMaterials();
 
-	void ConstructCherenkov();
-	void ConstructScintillator();
-
 	G4double xWorld, yWorld, zWorld;
-	G4bool isCherenkov, isScintillator;
+	G4bool isCherenkov, isScintillator, isAtmosphere;
 };
 
 #endif

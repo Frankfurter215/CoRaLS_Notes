@@ -6,6 +6,7 @@
 #include "G4VisManager.hh"
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
+#include "QGSP_BERT.hh"
 
 #include "construction.hh" // inclusion of detector
 #include "physics.hh" //inclusion of physics lists
@@ -13,30 +14,27 @@
 
 int main(int argc, char** argv)
 {
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
+	G4UIExecutive *ui = 0;
+
 	#ifdef G4MULTITHREADED
 		G4MTRunManager *runManager = new G4MTRunManager();
 	#else
 		G4RunManager *runManager = new G4RunManager();
 	#endif
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
 
-        MyDetectorConstruction * mydetector = new MyDetectorConstruction();
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
-
-	runManager->SetUserInitialization(mydetector);
+	runManager->SetUserInitialization(new MyDetectorConstruction);
 	runManager->SetUserInitialization(new MyPhysicsList());
 	runManager->SetUserInitialization(new MyActionInitialization());
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
 
-	G4UIExecutive *ui = 0;
+	G4VModularPhysicsList* physics = new QGSP_BERT();
+	physics->RegisterPhysics(new G4DecayPhysics());
+	runManager->SetUserInitialization(physics);
 
 	if(argc == 1)
 	{
 		ui = new G4UIExecutive(argc, argv);
 	}
 
-std::cout << __FILE__ << " " << __FUNCTION__ << " " << __LINE__ << std::endl;
 	G4VisManager *visManager = new G4VisExecutive();
 	visManager->Initialize();
 
