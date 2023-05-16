@@ -1,6 +1,6 @@
 #include "construction.hh"
 #include <iostream>
-
+//i hate github
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
