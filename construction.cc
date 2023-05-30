@@ -6,7 +6,8 @@ MyDetectorConstruction::MyDetectorConstruction()
 {
 	isCherenkov = false;
 	isScintillator= false;
-	isAtmosphere = true;
+	isAtmosphere = false;
+	isRegolith = true;
 	
 	nCols = 100;
 	nRows = 100;
@@ -21,9 +22,9 @@ MyDetectorConstruction::MyDetectorConstruction()
 
 	DefineMaterials();
 
-	xWorld = 40.*km;
-	yWorld = 40.*km; //defining x and y width of the world volume in variables
-	zWorld = 20.*km;
+	xWorld = 20.*m;
+	yWorld = 20.*m; //defining x and y width of the world volume in variables
+	zWorld = 10.*m;
 
 }
 
@@ -54,11 +55,40 @@ endnew*/
 	Aerogel->AddMaterial(water, 37.4*perCent);
 	Aerogel->AddElement(C, 0.1*perCent);
 
-	worldMat = nist->FindOrBuildMaterial("G4_AIR");
+	//Define regolith
+	Al2O3 = new G4Material("Al2O3", 3.95*g/cm3, 2);
+	Al2O3->AddElement(nist->FindOrBuildElement("Al"), 2);
+	Al2O3->AddElement(nist->FindOrBuildElement("O"), 3);
+
+	CaO = new G4Material("CaO", 3.34*g/cm3, 2);
+	CaO->AddElement(nist->FindOrBuildElement("Ca"), 1);
+	CaO->AddElement(nist->FindOrBuildElement("O"), 1);
+
+	MgO = new G4Material("MgO", 3.58*g/cm3, 2);
+	MgO->AddElement(nist->FindOrBuildElement("Mg"), 1);
+	MgO->AddElement(nist->FindOrBuildElement("O"), 1);
+
+	TiO2 = new G4Material("TiO2", 4.23*g/cm3, 2);
+	TiO2->AddElement(nist->FindOrBuildElement("Ti"), 1);
+	TiO2->AddElement(nist->FindOrBuildElement("O"), 2);
+
+	FeO = new G4Material("FeO", 5.74*g/cm3, 2);
+	FeO->AddElement(nist->FindOrBuildElement("Fe"), 1);
+	FeO->AddElement(nist->FindOrBuildElement("O"), 1);
+	
+	Regolith= new G4Material("Regolith", 1.5*g/cm3, 6);
+	Regolith->AddMaterial(SiO2, 50.*perCent);
+	Regolith->AddMaterial(Al2O3, 15*perCent);
+	Regolith->AddMaterial(CaO, 10.*perCent);
+	Regolith->AddMaterial(MgO, 10.*perCent);
+	Regolith->AddMaterial(TiO2, 5*perCent);
+	Regolith->AddMaterial(FeO, 10.*perCent);
+
+	worldMat = nist->FindOrBuildMaterial("Regolith");
 
 	G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2}; //conversion factor divided by wavelength in micrometer for red and blue light respectively
 	G4double rindexAerogel[2] = {1.1, 1.1};// refractive index of aerogel constant for this example
-	G4double rindexWorld[2] = {1.0, 1.0};
+	G4double rindexWorld[2] = {1.55, 1.4};
 
 	G4MaterialPropertiesTable *mptAerogel = new G4MaterialPropertiesTable();
 	mptAerogel->AddProperty("RINDEX", energy, rindexAerogel, 2); //adding properties of the aerogel so it radiates
@@ -158,8 +188,14 @@ void MyDetectorConstruction::ConstructAtmosphere()
      logicAtmosphere[i] = new G4LogicalVolume(solidAtmosphere, Air[i], "logicAtmosphere"); 
      physAtmosphere[i] = new G4PVPlacement(0, G4ThreeVector(0, 0, zWorld/10.*2*i - zWorld +zWorld/10.), logicAtmosphere[i], "physAtmosphere", logicWorld, false, i, true); 
   } 
-
-} 
+}
+void MyDetectorConstruction::ConstructRegolith()
+{
+    solidRegolith = new G4Box("solidRegolith", xWorld, yWorld, zWorld);
+    logicRegolith = new G4LogicalVolume(solidRegolith, Regolith, "logicRegolith");
+    physRegolith = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicRegolith, "physRegolith", logicWorld, false, 0, true);
+}
+ 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
 
@@ -175,5 +211,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 		ConstructScintillator();
 	if(isAtmosphere)
 		ConstructAtmosphere();
+	if(isRegolith)
+	  ConstructRegolith();
 	return physWorld;
 }

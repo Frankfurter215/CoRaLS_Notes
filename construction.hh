@@ -26,6 +26,7 @@ public:
 	void ConstructCherenkov();
 	void ConstructScintillator();
 	void ConstructAtmosphere();
+  void ConstructRegolith();
 
 private:
 	G4LogicalVolume *logicDetector;
@@ -33,19 +34,19 @@ private:
 
 	G4int nCols, nRows;
 
-	G4Box *solidWorld, *solidRadiator, *solidDetector, *solidScintillator, *solidAtmosphere;
-	G4LogicalVolume *logicWorld, *logicRadiator, *logicScintillator, *logicAtmosphere[10];
-	G4VPhysicalVolume *physWorld, *physRadiator, *physDetector, *physScintillator, *physAtmosphere[10];
+  G4Box *solidWorld, *solidRadiator, *solidDetector, *solidScintillator, *solidAtmosphere, *solidRegolith;
+  G4LogicalVolume *logicWorld, *logicRadiator, *logicScintillator, *logicAtmosphere[10], *logicRegolith;
+  G4VPhysicalVolume *physWorld, *physRadiator, *physDetector, *physScintillator, *physAtmosphere[10], *physRegolith;
 
 	G4GenericMessenger *fMessenger;
 
-	G4Material *SiO2, *water, *Aerogel, *worldMat, *NaI, *Air[10];
-	G4Element *C, *Na, *I, *N, *O;
+  G4Material *SiO2, *water, *Aerogel, *worldMat, *NaI, *Air[10], *Al2O3, *CaO, *MgO, *TiO2, *FeO, *Regolith;
+  G4Element *C, *Na, *I, *N, *O;
 
 	void DefineMaterials();
 
 	G4double xWorld, yWorld, zWorld;
-	G4bool isCherenkov, isScintillator, isAtmosphere;
+  G4bool isCherenkov, isScintillator, isAtmosphere, isRegolith;
 };
 
 #endif

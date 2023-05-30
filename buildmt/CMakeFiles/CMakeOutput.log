@@ -559,3 +559,803 @@ make[1]: Leaving directory '/home/frank/software/geant4/sim/buildmt/CMakeFiles/C
 
 
 
+The system is: Linux - 3.10.0-1160.81.1.el7.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /apps/gnu-compatibility/11.2.0/bin/gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/3.20.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /apps/gnu-compatibility/11.2.0/bin/g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/3.20.2/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_e0f9a/fast && /bin/gmake  -f CMakeFiles/cmTC_e0f9a.dir/build.make CMakeFiles/cmTC_e0f9a.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc   -v -o CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/gnu/11.2.0
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e0f9a.dir/'
+ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/cc1 -quiet -v -iprefix /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/ /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e0f9a.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/slurmtmp.5198468/ccgrLSYZ.s
+GNU C17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 11.2.0, GMP version 6.1.0, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include"
+ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed"
+ignoring nonexistent directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed
+ /usr/local/include
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../include
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 11.2.0, GMP version 6.1.0, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 6b7059ede8476816993a81f3add7dd57
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e0f9a.dir/'
+ as -v --64 -o CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o /tmp/slurmtmp.5198468/ccgrLSYZ.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1
+COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/
+LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_e0f9a
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0f9a.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc  -v -rdynamic CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o -o cmTC_e0f9a 
+Using built-in specs.
+COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/gnu/11.2.0
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.2.0 (GCC) 
+COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/
+LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e0f9a' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e0f9a.'
+ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/slurmtmp.5198468/ccLPtnvY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e0f9a /lib/../lib64/crt1.o /lib/../lib64/crti.o /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e0f9a' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e0f9a.'
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
+    add: [/usr/local/include]
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../include]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../include] ==> [/usr/local/gnu-compatibility/11.2.0/include]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include;/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed;/usr/local/include;/usr/local/gnu-compatibility/11.2.0/include;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/bin/gmake -f Makefile cmTC_e0f9a/fast && /bin/gmake  -f CMakeFiles/cmTC_e0f9a.dir/build.make CMakeFiles/cmTC_e0f9a.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/apps/gnu-compatibility/11.2.0/bin/gcc   -v -o CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/gnu/11.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e0f9a.dir/']
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/cc1 -quiet -v -iprefix /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/ /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e0f9a.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/slurmtmp.5198468/ccgrLSYZ.s]
+  ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.1.0  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include"]
+  ignore line: [ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.1.0  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 6b7059ede8476816993a81f3add7dd57]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e0f9a.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o /tmp/slurmtmp.5198468/ccgrLSYZ.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1]
+  ignore line: [COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_e0f9a]
+  ignore line: [/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0f9a.dir/link.txt --verbose=1]
+  ignore line: [/apps/gnu-compatibility/11.2.0/bin/gcc  -v -rdynamic CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o -o cmTC_e0f9a ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/gnu/11.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e0f9a' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e0f9a.']
+  link line: [ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/slurmtmp.5198468/ccLPtnvY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e0f9a /lib/../lib64/crt1.o /lib/../lib64/crti.o /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/slurmtmp.5198468/ccLPtnvY.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_e0f9a] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+    arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o] ==> obj [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..]
+    arg [CMakeFiles/cmTC_e0f9a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o] ==> obj [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o]
+    arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+  collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+  collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+  collapse obj [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o]
+  collapse obj [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o]
+  collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> [/usr/local/gnu-compatibility/11.2.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> [/usr/local/gnu-compatibility/11.2.0/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/lib64/crt1.o;/lib64/crti.o;/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o;/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o;/lib64/crtn.o]
+  implicit dirs: [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0;/usr/local/gnu-compatibility/11.2.0/lib/gcc;/usr/local/gnu-compatibility/11.2.0/lib64;/lib64;/usr/lib64;/usr/local/gnu-compatibility/11.2.0/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_74af5/fast && /bin/gmake  -f CMakeFiles/cmTC_74af5.dir/build.make CMakeFiles/cmTC_74af5.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o
+/apps/gnu-compatibility/11.2.0/bin/g++   -v -o CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/g++
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/gnu/11.2.0
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.2.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_74af5.dir/'
+ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/cc1plus -quiet -v -iprefix /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/ -D_GNU_SOURCE /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_74af5.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/slurmtmp.5198468/cc9iJhDe.s
+GNU C++17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 11.2.0, GMP version 6.1.0, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"
+ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0"
+ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu"
+ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward"
+ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include"
+ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed"
+ignoring nonexistent directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed
+ /usr/local/include
+ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../include
+ /usr/include
+End of search list.
+GNU C++17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 11.2.0, GMP version 6.1.0, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: d8f61c5f516879b393d9e3f82e4353e6
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_74af5.dir/'
+ as -v --64 -o CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o /tmp/slurmtmp.5198468/cc9iJhDe.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1
+COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/
+LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_74af5
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74af5.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/g++  -v -rdynamic CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_74af5 
+Using built-in specs.
+COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/g++
+COLLECT_LTO_WRAPPER=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/gnu/11.2.0
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.2.0 (GCC) 
+COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/
+LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_74af5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_74af5.'
+ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/slurmtmp.5198468/ccGaFQQc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_74af5 /lib/../lib64/crt1.o /lib/../lib64/crti.o /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_74af5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_74af5.'
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0]
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu]
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward]
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
+    add: [/usr/local/include]
+    add: [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../include]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0] ==> [/usr/local/gnu-compatibility/11.2.0/include/c++/11.2.0]
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu] ==> [/usr/local/gnu-compatibility/11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu]
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward] ==> [/usr/local/gnu-compatibility/11.2.0/include/c++/11.2.0/backward]
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../include] ==> [/usr/local/gnu-compatibility/11.2.0/include]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/local/gnu-compatibility/11.2.0/include/c++/11.2.0;/usr/local/gnu-compatibility/11.2.0/include/c++/11.2.0/x86_64-pc-linux-gnu;/usr/local/gnu-compatibility/11.2.0/include/c++/11.2.0/backward;/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include;/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed;/usr/local/include;/usr/local/gnu-compatibility/11.2.0/include;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/bin/gmake -f Makefile cmTC_74af5/fast && /bin/gmake  -f CMakeFiles/cmTC_74af5.dir/build.make CMakeFiles/cmTC_74af5.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/apps/gnu-compatibility/11.2.0/bin/g++   -v -o CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/g++]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/gnu/11.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.2.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_74af5.dir/']
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/cc1plus -quiet -v -iprefix /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/ -D_GNU_SOURCE /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_74af5.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/slurmtmp.5198468/cc9iJhDe.s]
+  ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.1.0  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0"]
+  ignore line: [ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu"]
+  ignore line: [ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward"]
+  ignore line: [ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include"]
+  ignore line: [ignoring duplicate directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/x86_64-pc-linux-gnu]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../include/c++/11.2.0/backward]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/include-fixed]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/../../include]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.1.0  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: d8f61c5f516879b393d9e3f82e4353e6]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_74af5.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o /tmp/slurmtmp.5198468/cc9iJhDe.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1]
+  ignore line: [COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX executable cmTC_74af5]
+  ignore line: [/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74af5.dir/link.txt --verbose=1]
+  ignore line: [/apps/gnu-compatibility/11.2.0/bin/g++  -v -rdynamic CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_74af5 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/gnu/11.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_74af5' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_74af5.']
+  link line: [ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/slurmtmp.5198468/ccGaFQQc.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_74af5 /lib/../lib64/crt1.o /lib/../lib64/crti.o /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/slurmtmp.5198468/ccGaFQQc.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_74af5] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+    arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o] ==> obj [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..]
+    arg [CMakeFiles/cmTC_74af5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o] ==> obj [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o]
+    arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+  collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+  collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+  collapse obj [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o]
+  collapse obj [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o]
+  collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> [/usr/local/gnu-compatibility/11.2.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> [/usr/local/gnu-compatibility/11.2.0/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/lib64/crt1.o;/lib64/crti.o;/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o;/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o;/lib64/crtn.o]
+  implicit dirs: [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0;/usr/local/gnu-compatibility/11.2.0/lib/gcc;/usr/local/gnu-compatibility/11.2.0/lib64;/lib64;/usr/lib64;/usr/local/gnu-compatibility/11.2.0/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_6908e/fast && /bin/gmake  -f CMakeFiles/cmTC_6908e.dir/build.make CMakeFiles/cmTC_6908e.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6908e.dir/CheckIncludeFile.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc    -o CMakeFiles/cmTC_6908e.dir/CheckIncludeFile.c.o -c /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6908e
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6908e.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc CMakeFiles/cmTC_6908e.dir/CheckIncludeFile.c.o -o cmTC_6908e 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function XOpenDisplay exists in the /usr/lib64/libX11.so;/usr/lib64/libXext.so passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_cb894/fast && /bin/gmake  -f CMakeFiles/cmTC_cb894.dir/build.make CMakeFiles/cmTC_cb894.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb894.dir/CheckFunctionExists.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_cb894.dir/CheckFunctionExists.c.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cb894
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb894.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_cb894.dir/CheckFunctionExists.c.o -o cmTC_cb894  /usr/lib64/libX11.so /usr/lib64/libXext.so 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function gethostbyname exists passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_1bd66/fast && /bin/gmake  -f CMakeFiles/cmTC_1bd66.dir/build.make CMakeFiles/cmTC_1bd66.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1bd66.dir/CheckFunctionExists.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_1bd66.dir/CheckFunctionExists.c.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1bd66
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bd66.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_1bd66.dir/CheckFunctionExists.c.o -o cmTC_1bd66 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function connect exists passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_cb7ed/fast && /bin/gmake  -f CMakeFiles/cmTC_cb7ed.dir/build.make CMakeFiles/cmTC_cb7ed.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb7ed.dir/CheckFunctionExists.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_cb7ed.dir/CheckFunctionExists.c.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cb7ed
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb7ed.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_cb7ed.dir/CheckFunctionExists.c.o -o cmTC_cb7ed 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function remove exists passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_7d657/fast && /bin/gmake  -f CMakeFiles/cmTC_7d657.dir/build.make CMakeFiles/cmTC_7d657.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7d657.dir/CheckFunctionExists.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_7d657.dir/CheckFunctionExists.c.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7d657
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d657.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_7d657.dir/CheckFunctionExists.c.o -o cmTC_7d657 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function shmat exists passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_54ef7/fast && /bin/gmake  -f CMakeFiles/cmTC_54ef7.dir/build.make CMakeFiles/cmTC_54ef7.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_54ef7.dir/CheckFunctionExists.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_54ef7.dir/CheckFunctionExists.c.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_54ef7
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54ef7.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_54ef7.dir/CheckFunctionExists.c.o -o cmTC_54ef7 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/bin/gmake -f Makefile cmTC_6fbc3/fast && /bin/gmake  -f CMakeFiles/cmTC_6fbc3.dir/build.make CMakeFiles/cmTC_6fbc3.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6fbc3.dir/CheckFunctionExists.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_6fbc3.dir/CheckFunctionExists.c.o -c /usr/local/cmake/3.20.2/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6fbc3
+/usr/local/cmake/3.20.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fbc3.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_6fbc3.dir/CheckFunctionExists.c.o -o cmTC_6fbc3  -lICE 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+
+The system is: Linux - 3.10.0-1160.81.1.el7.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /apps/gnu-compatibility/11.2.0/bin/gcc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /apps/gnu-compatibility/11.2.0/bin/g++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command:/bin/gmake "cmTryCompileExec170860635/fast"
+/bin/gmake -f CMakeFiles/cmTryCompileExec170860635.dir/build.make CMakeFiles/cmTryCompileExec170860635.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec170860635.dir/testCCompiler.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc    -o CMakeFiles/cmTryCompileExec170860635.dir/testCCompiler.c.o   -c /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec170860635
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec170860635.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc       CMakeFiles/cmTryCompileExec170860635.dir/testCCompiler.c.o  -o cmTryCompileExec170860635 -rdynamic 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command:/bin/gmake "cmTryCompileExec908315453/fast"
+/bin/gmake -f CMakeFiles/cmTryCompileExec908315453.dir/build.make CMakeFiles/cmTryCompileExec908315453.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o
+/apps/gnu-compatibility/11.2.0/bin/gcc    -o CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec908315453
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec908315453.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/gcc     -v CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec908315453 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/gnu/11.2.0
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.2.0 (GCC) 
+COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/
+LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec908315453' '-rdynamic' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTryCompileExec908315453.'
+ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/slurmtmp.5210145/cc5gHXln.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec908315453 /lib/../lib64/crt1.o /lib/../lib64/crti.o /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec908315453' '-rdynamic' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTryCompileExec908315453.'
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/bin/gmake "cmTryCompileExec908315453/fast"]
+  ignore line: [/bin/gmake -f CMakeFiles/cmTryCompileExec908315453.dir/build.make CMakeFiles/cmTryCompileExec908315453.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/apps/gnu-compatibility/11.2.0/bin/gcc    -o CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec908315453]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec908315453.dir/link.txt --verbose=1]
+  ignore line: [/apps/gnu-compatibility/11.2.0/bin/gcc     -v CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec908315453 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/gnu/11.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec908315453' '-rdynamic' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTryCompileExec908315453.']
+  link line: [ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/slurmtmp.5210145/cc5gHXln.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec908315453 /lib/../lib64/crt1.o /lib/../lib64/crti.o /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/slurmtmp.5210145/cc5gHXln.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec908315453] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o] ==> ignore
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..]
+    arg [CMakeFiles/cmTryCompileExec908315453.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> [/usr/local/gnu-compatibility/11.2.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> [/usr/local/gnu-compatibility/11.2.0/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0;/usr/local/gnu-compatibility/11.2.0/lib/gcc;/usr/local/gnu-compatibility/11.2.0/lib64;/lib64;/usr/lib64;/usr/local/gnu-compatibility/11.2.0/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command:/bin/gmake "cmTryCompileExec991276686/fast"
+/bin/gmake -f CMakeFiles/cmTryCompileExec991276686.dir/build.make CMakeFiles/cmTryCompileExec991276686.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec991276686.dir/testCXXCompiler.cxx.o
+/apps/gnu-compatibility/11.2.0/bin/g++     -o CMakeFiles/cmTryCompileExec991276686.dir/testCXXCompiler.cxx.o -c /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec991276686
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec991276686.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/g++        CMakeFiles/cmTryCompileExec991276686.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec991276686 -rdynamic 
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp
+
+Run Build Command:/bin/gmake "cmTryCompileExec2350895516/fast"
+/bin/gmake -f CMakeFiles/cmTryCompileExec2350895516.dir/build.make CMakeFiles/cmTryCompileExec2350895516.dir/build
+gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o
+/apps/gnu-compatibility/11.2.0/bin/g++     -o CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec2350895516
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2350895516.dir/link.txt --verbose=1
+/apps/gnu-compatibility/11.2.0/bin/g++      -v CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2350895516 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/g++
+COLLECT_LTO_WRAPPER=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ./configure --prefix=/apps/gnu/11.2.0
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 11.2.0 (GCC) 
+COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/
+LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2350895516' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTryCompileExec2350895516.'
+ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/slurmtmp.5210145/ccsPL6aG.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2350895516 /lib/../lib64/crt1.o /lib/../lib64/crti.o /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2350895516' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTryCompileExec2350895516.'
+gmake[1]: Leaving directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/bin/gmake "cmTryCompileExec2350895516/fast"]
+  ignore line: [/bin/gmake -f CMakeFiles/cmTryCompileExec2350895516.dir/build.make CMakeFiles/cmTryCompileExec2350895516.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/buildmt/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/apps/gnu-compatibility/11.2.0/bin/g++     -o CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec2350895516]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2350895516.dir/link.txt --verbose=1]
+  ignore line: [/apps/gnu-compatibility/11.2.0/bin/g++      -v CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2350895516 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/apps/gnu-compatibility/11.2.0/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ./configure --prefix=/apps/gnu/11.2.0]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 11.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2350895516' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTryCompileExec2350895516.']
+  link line: [ /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2 -plugin /usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so -plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/slurmtmp.5210145/ccsPL6aG.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2350895516 /lib/../lib64/crt1.o /lib/../lib64/crti.o /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../.. CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/gnu-compatibility/11.2.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/slurmtmp.5210145/ccsPL6aG.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2350895516] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtbegin.o] ==> ignore
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..]
+    arg [CMakeFiles/cmTryCompileExec2350895516.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc] ==> [/usr/local/gnu-compatibility/11.2.0/lib/gcc]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../../../lib64] ==> [/usr/local/gnu-compatibility/11.2.0/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/local/gnu-compatibility/11.2.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.2.0/../../..] ==> [/usr/local/gnu-compatibility/11.2.0/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/local/gnu-compatibility/11.2.0/lib/gcc/x86_64-pc-linux-gnu/11.2.0;/usr/local/gnu-compatibility/11.2.0/lib/gcc;/usr/local/gnu-compatibility/11.2.0/lib64;/lib64;/usr/lib64;/usr/local/gnu-compatibility/11.2.0/lib]
+  implicit fwks: []
+
+
