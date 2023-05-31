@@ -9,8 +9,8 @@ MyDetectorConstruction::MyDetectorConstruction()
 	isAtmosphere = false;
 	isRegolith = true;
 	
-	nCols = 100;
-	nRows = 100;
+	nCols = 1;
+	nRows = 1;
 
 	fMessenger = new G4GenericMessenger(this, "/detector/", "Detector Construction");
 
@@ -21,7 +21,14 @@ MyDetectorConstruction::MyDetectorConstruction()
 
 
 	DefineMaterials();
+/*
+//worldvolume for cherenkov
+	xWorld = 1*m;
+	yWorld = 1*m;
+	zWorld = 1*m;
+*/
 
+//worldvolume for regolith
 	xWorld = 20.*m;
 	yWorld = 20.*m; //defining x and y width of the world volume in variables
 	zWorld = 10.*m;
@@ -173,8 +180,11 @@ void MyDetectorConstruction::ConstructScintillator()
 void MyDetectorConstruction::ConstructSDandField()
 {
 	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
-
+/*
 	if(isCherenkov)
+		logicDetector->SetSensitiveDetector(sensDet);
+*/
+	if(isRegolith)
 		logicDetector->SetSensitiveDetector(sensDet);
 
 }
@@ -194,6 +204,10 @@ void MyDetectorConstruction::ConstructRegolith()
     solidRegolith = new G4Box("solidRegolith", xWorld, yWorld, zWorld);
     logicRegolith = new G4LogicalVolume(solidRegolith, Regolith, "logicRegolith");
     physRegolith = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicRegolith, "physRegolith", logicWorld, false, 0, true);
+
+  solidDetector = new G4Box("solidDetector", xWorld, yWorld, 0.25*m);
+  logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicDetector");
+  physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., -5*m), logicDetector, "physDetector", logicWorld, false, 0, true);
 }
  
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
