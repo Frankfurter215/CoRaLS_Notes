@@ -1,5 +1,6 @@
 #include "generator.hh"
 #include "G4ParticleGun.hh"
+
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
 	fParticleGun = new G4ParticleGun(1); //1 particle per event
@@ -7,12 +8,12 @@ MyPrimaryGenerator::MyPrimaryGenerator()
 	G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 	G4ParticleDefinition *particle = particleTable->FindParticle("chargedgeantino");
 
-// generator for regolith
+	// generator for regolith
 	G4ThreeVector pos(0., -15*m, -10.*m);
 	G4ThreeVector mom(0., 3., 1.73);
 
 /*
-//generator for cherenkov
+	//generator for cherenkov
 	G4ThreeVector pos(0., 0., 0.); //created in center of mother volume
 	G4ThreeVector mom(0., 0., 1); //sets momentum direction in positive set direction
 */

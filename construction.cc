@@ -1,6 +1,6 @@
 #include "construction.hh"
 #include <iostream>
-//i hate github
+//i hate github-> its starting to grow on me
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
@@ -21,18 +21,20 @@ MyDetectorConstruction::MyDetectorConstruction()
 
 
 	DefineMaterials();
-/*
-//worldvolume for cherenkov
-	xWorld = 1*m;
-	yWorld = 1*m;
-	zWorld = 1*m;
-*/
 
-//worldvolume for regolith
+	if(isCherenkov)
+	{
+	xWorld = 0.5*m;
+	yWorld = 0.5*m;
+	zWorld = 0.5*m;
+	}
+
+	if(isRegolith)
+	{
 	xWorld = 20.*m;
 	yWorld = 20.*m; //defining x and y width of the world volume in variables
 	zWorld = 10.*m;
-
+	}
 }
 
 MyDetectorConstruction::~MyDetectorConstruction()
@@ -91,11 +93,12 @@ endnew*/
 	Regolith->AddMaterial(TiO2, 5*perCent);
 	Regolith->AddMaterial(FeO, 10.*perCent);
 
-	worldMat = nist->FindOrBuildMaterial("Regolith");
+	worldMat = nist->FindOrBuildMaterial("G4_AIR");
 
 	G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2}; //conversion factor divided by wavelength in micrometer for red and blue light respectively
 	G4double rindexAerogel[2] = {1.1, 1.1};// refractive index of aerogel constant for this example
 	G4double rindexWorld[2] = {1.55, 1.4};
+	G4double rindexRegolith[2] = {1.55, 1.4}; //just used the rindex of silica
 
 	G4MaterialPropertiesTable *mptAerogel = new G4MaterialPropertiesTable();
 	mptAerogel->AddProperty("RINDEX", energy, rindexAerogel, 2); //adding properties of the aerogel so it radiates
@@ -103,9 +106,14 @@ endnew*/
 	G4MaterialPropertiesTable *mptWorld = new G4MaterialPropertiesTable();
 	mptWorld->AddProperty("RINDEX", energy, rindexWorld, 2); //adding properties of the air so that radiation extends past radiator
 
+	G4MaterialPropertiesTable *mptRegolith = new G4MaterialPropertiesTable();
+	mptRegolith->AddProperty("RINDEX", energy, rindexRegolith, 2);
+
 	Aerogel->SetMaterialPropertiesTable(mptAerogel);
 
 	worldMat->SetMaterialPropertiesTable(mptWorld);
+
+	Regolith->SetMaterialPropertiesTable(mptRegolith);
 
 	NaI = new G4Material("NaI", 3.67*g/cm3, 2);
 	NaI->AddElement(nist->FindOrBuildElement("Na"), 1);
@@ -207,7 +215,7 @@ void MyDetectorConstruction::ConstructRegolith()
 
   solidDetector = new G4Box("solidDetector", xWorld, yWorld, 0.25*m);
   logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicDetector");
-  physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., -5*m), logicDetector, "physDetector", logicWorld, false, 0, true);
+  physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., 9.5*m), logicDetector, "physDetector", logicWorld, false, 0, true);
 }
  
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
