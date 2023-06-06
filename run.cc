@@ -36,8 +36,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	std::stringstream strRunID;
 	strRunID << runID;
 	std::cout << runID;
-//	man->OpenFile("test"+strRunID.str()+".root");
-	man->OpenFile("hahahaha.root");
+	man->OpenFile("test"+strRunID.str()+".root");
 
 }
 

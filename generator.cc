@@ -7,16 +7,16 @@ MyPrimaryGenerator::MyPrimaryGenerator()
 
 	G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 	G4ParticleDefinition *particle = particleTable->FindParticle("chargedgeantino");
-
+/*
 	// generator for regolith
 	G4ThreeVector pos(0., -15*m, -10.*m);
 	G4ThreeVector mom(0., 3., 1.73);
+*/
 
-/*
 	//generator for cherenkov
 	G4ThreeVector pos(0., 0., 0.); //created in center of mother volume
 	G4ThreeVector mom(0., 0., 1); //sets momentum direction in positive set direction
-*/
+
 	fParticleGun->SetParticlePosition(pos);
 	fParticleGun->SetParticleMomentumDirection(mom); //again, just sets the direction of momentum doesn't create momentum
 	fParticleGun->SetParticleMomentum(1000.*GeV); //set particle at very high momentum (original units meV)

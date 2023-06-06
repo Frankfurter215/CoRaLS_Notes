@@ -31,9 +31,9 @@ MyDetectorConstruction::MyDetectorConstruction()
 
 	if(isRegolith)
 	{
-	xWorld = 20.*m;
-	yWorld = 20.*m; //defining x and y width of the world volume in variables
-	zWorld = 10.*m;
+	xWorld = 1*m;
+	yWorld = 1*m; //defining x and y width of the world volume in variables
+	zWorld = 1*m;
 	}
 }
 
@@ -93,7 +93,7 @@ endnew*/
 	Regolith->AddMaterial(TiO2, 5*perCent);
 	Regolith->AddMaterial(FeO, 10.*perCent);
 
-	worldMat = nist->FindOrBuildMaterial("G4_AIR");
+	worldMat = nist->FindOrBuildMaterial("Regolith");
 
 	G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2}; //conversion factor divided by wavelength in micrometer for red and blue light respectively
 	G4double rindexAerogel[2] = {1.1, 1.1};// refractive index of aerogel constant for this example
@@ -165,7 +165,7 @@ void MyDetectorConstruction::ConstructCherenkov()
 	{
 		for(G4int j = 0; j < nCols; j++)
 			{
-				physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 0.49*m), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
+				physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 0.1*m), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
 			}
 	}
 
@@ -185,18 +185,6 @@ void MyDetectorConstruction::ConstructScintillator()
 	physScintillator = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicScintillator, "physScintillator", logicWorld, false, 0, true);
 }
 
-void MyDetectorConstruction::ConstructSDandField()
-{
-	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
-/*
-	if(isCherenkov)
-		logicDetector->SetSensitiveDetector(sensDet);
-*/
-	if(isRegolith)
-		logicDetector->SetSensitiveDetector(sensDet);
-
-}
-
 void MyDetectorConstruction::ConstructAtmosphere() 
 { 
   solidAtmosphere = new G4Box("solidAtmosphere", xWorld, yWorld, zWorld/10.); //zworld/10 b/c we want 10 layers 
@@ -209,15 +197,36 @@ void MyDetectorConstruction::ConstructAtmosphere()
 }
 void MyDetectorConstruction::ConstructRegolith()
 {
-    solidRegolith = new G4Box("solidRegolith", xWorld, yWorld, zWorld);
-    logicRegolith = new G4LogicalVolume(solidRegolith, Regolith, "logicRegolith");
-    physRegolith = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicRegolith, "physRegolith", logicWorld, false, 0, true);
 
-  solidDetector = new G4Box("solidDetector", xWorld, yWorld, 0.25*m);
-  logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicDetector");
-  physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., 9.5*m), logicDetector, "physDetector", logicWorld, false, 0, true);
+    solidRegolith = new G4Box("solidRegolith", xWorld, yWorld, 9*zWorld/10.);
+    logicRegolith = new G4LogicalVolume(solidRegolith, Regolith, "logicRegolith");
+    physRegolith = new G4PVPlacement(0, G4ThreeVector(0., 0., -zWorld/10.), logicRegolith, "physRegolith", logicWorld, false, 0, true);
+
+	solidDetector = new G4Box("solidDetector", xWorld/nRows, yWorld/nCols, zWorld/10); // (half width, half length, half thickness)
+
+	logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicDetector");//for this example it consists of world material
+
+
+	for(G4int i = 0; i < nRows; i++)
+	{
+		for(G4int j = 0; j < nCols; j++)
+			{
+				physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 9*zWorld/10.), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
+			}
+	}
+
 }
  
+void MyDetectorConstruction::ConstructSDandField()
+{
+	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
+
+    if(logicDetector != NULL)
+        logicDetector->SetSensitiveDetector(sensDet);
+
+}
+
+
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
 
@@ -235,5 +244,6 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 		ConstructAtmosphere();
 	if(isRegolith)
 	  ConstructRegolith();
+
 	return physWorld;
 }
