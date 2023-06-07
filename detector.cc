@@ -10,13 +10,17 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 {
 	G4Track *track = aStep->GetTrack();
 
-	track->SetTrackStatus(fStopAndKill);
+	track->SetTrackStatus(fKillTrackAndSecondaries);
 
 	G4StepPoint *preStepPoint = aStep->GetPreStepPoint(); //Gets point where photon initially enters the sensitive volume
 	//G4StepPoint *postStepPoint = aStep->GetPostStepPoint(); //info from where photon leaves detector
 
 	G4ThreeVector posPhoton = preStepPoint->GetPosition();
 	G4ThreeVector momPhoton = preStepPoint->GetMomentum();
+	
+	const G4ParticleDefinition *pdef = track->GetParticleDefinition();
+
+	G4String particleName = pdef->GetParticleName();
 
 	G4double wlen = (1.239841939*eV/momPhoton.mag())*1E+03;
 
@@ -51,6 +55,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 	man->FillNtupleDColumn(1, 1, posDetector[0]);
 	man->FillNtupleDColumn(1, 2, posDetector[1]);
 	man->FillNtupleDColumn(1, 3, posDetector[2]);
+	man->FillNtupleSColumn(1, 4, particleName);
 	man->AddNtupleRow(1);
 
 	return true;

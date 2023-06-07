@@ -1,4 +1,3 @@
-/run/numberOfThreads 4
 /run/initialize
 /gun/momentumAmp 1000 GeV
-/run/beamOn 8
+/run/beamOn 10

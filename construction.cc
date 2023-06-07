@@ -31,9 +31,9 @@ MyDetectorConstruction::MyDetectorConstruction()
 
 	if(isRegolith)
 	{
-	xWorld = 1*m;
-	yWorld = 1*m; //defining x and y width of the world volume in variables
-	zWorld = 1*m;
+	xWorld = 10.*m;
+	yWorld = 10.*m; //defining x and y width of the world volume in variables
+	zWorld = 10.*m;
 	}
 }
 

@@ -17,6 +17,7 @@ MyRunAction::MyRunAction()
 	man->CreateNtupleDColumn("fX");
 	man->CreateNtupleDColumn("fY");
 	man->CreateNtupleDColumn("fZ"); //these show position
+	man->CreateNtupleSColumn("partNames");
 	man->FinishNtuple(1); //this second set (ntuple) is labelled as number 1
 
 	man->CreateNtuple("Scoring", "Scoring");
