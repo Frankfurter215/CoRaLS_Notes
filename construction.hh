@@ -45,7 +45,7 @@ private:
 
 	void DefineMaterials();
 
-	G4double xWorld, yWorld, zWorld;
+	G4double xWorld, yWorld, zWorld, detThic;
   G4bool isCherenkov, isScintillator, isAtmosphere, isRegolith;
 };
 

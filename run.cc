@@ -3,7 +3,7 @@
 MyRunAction::MyRunAction()
 {
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
-
+/*
 	man->CreateNtuple("Photons", "Photons");
 	man->CreateNtupleIColumn("fEvent"); //stands for Integer column
 	man->CreateNtupleDColumn("fX");
@@ -11,18 +11,21 @@ MyRunAction::MyRunAction()
 	man->CreateNtupleDColumn("fZ"); //these show position
 	man->CreateNtupleDColumn("fwlen"); //shows wavelength
 	man->FinishNtuple(0); //this first set (ntuple) is labelled as number 0
-
+*/
 	man->CreateNtuple("Hits", "Hits");
+/*
 	man->CreateNtupleIColumn("fEvent"); //stands for Integer column
 	man->CreateNtupleDColumn("fX");
 	man->CreateNtupleDColumn("fY");
 	man->CreateNtupleDColumn("fZ"); //these show position
+*/
 	man->CreateNtupleSColumn("partNames");
-	man->FinishNtuple(1); //this second set (ntuple) is labelled as number 1
-
+	man->FinishNtuple(0); //this second set (ntuple) is labelled as number 1
+/*
 	man->CreateNtuple("Scoring", "Scoring");
 	man->CreateNtupleDColumn("fEdep");
 	man->FinishNtuple(2); //ntuple for nrg deposition
+*/
 }
 
 MyRunAction::~MyRunAction()

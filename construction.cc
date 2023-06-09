@@ -9,6 +9,8 @@ MyDetectorConstruction::MyDetectorConstruction()
 	isAtmosphere = false;
 	isRegolith = true;
 	
+	detThic = 0.1*m;
+
 	nCols = 1;
 	nRows = 1;
 
@@ -31,9 +33,9 @@ MyDetectorConstruction::MyDetectorConstruction()
 
 	if(isRegolith)
 	{
-	xWorld = 10.*m;
-	yWorld = 10.*m; //defining x and y width of the world volume in variables
-	zWorld = 10.*m;
+	xWorld = 5.*m;
+	yWorld = 5.*m; //defining x and y width of the world volume in variables
+	zWorld = 5.*m;
 	}
 }
 
@@ -197,23 +199,16 @@ void MyDetectorConstruction::ConstructAtmosphere()
 }
 void MyDetectorConstruction::ConstructRegolith()
 {
-
+/*
     solidRegolith = new G4Box("solidRegolith", xWorld, yWorld, 9*zWorld/10.);
     logicRegolith = new G4LogicalVolume(solidRegolith, Regolith, "logicRegolith");
     physRegolith = new G4PVPlacement(0, G4ThreeVector(0., 0., -zWorld/10.), logicRegolith, "physRegolith", logicWorld, false, 0, true);
-
-	solidDetector = new G4Box("solidDetector", xWorld/nRows, yWorld/nCols, zWorld/10); // (half width, half length, half thickness)
+*/
+	solidDetector = new G4Box("solidDetector", xWorld/nRows, yWorld/nCols, detThic); // (half width, half length, half thickness)
 
 	logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicDetector");//for this example it consists of world material
 
-
-	for(G4int i = 0; i < nRows; i++)
-	{
-		for(G4int j = 0; j < nCols; j++)
-			{
-				physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 9*zWorld/10.), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
-			}
-	}
+	physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., zWorld-detThic), logicDetector, "physDetector", logicWorld, false, 0, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
 
 }
  
