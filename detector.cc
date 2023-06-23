@@ -10,7 +10,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 {
 	G4Track *track = aStep->GetTrack();
 
-	track->SetTrackStatus(fKillTrackAndSecondaries);
+//	track->SetTrackStatus(fKillTrackAndSecondaries);
 
 	G4StepPoint *preStepPoint = aStep->GetPreStepPoint(); //Gets point where photon initially enters the sensitive volume
 	//G4StepPoint *postStepPoint = aStep->GetPostStepPoint(); //info from where photon leaves detector
@@ -19,11 +19,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 	G4ThreeVector momPhoton = preStepPoint->GetMomentum();
 	
 	const G4ParticleDefinition *pdef = track->GetParticleDefinition();
-
-	G4String particleName = pdef->GetParticleName();
-
+	
 	G4double wlen = (1.239841939*eV/momPhoton.mag())*1E+03;
 
+	G4double nrg = track->GetTotalEnergy()/MeV;
 
 	//G4cout << "Photon position:" << posPhoton << G4endl; //gives exact position of photon in coordinate system
 
@@ -35,14 +34,18 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 
 	G4VPhysicalVolume *physVol = touchable->GetVolume();
 	G4ThreeVector posDetector =  physVol->GetTranslation();
+	G4String particleName = pdef->GetParticleName();
 
-	#ifndef G4MULTITHREADED
-	G4cout << "Detector Position:" << posDetector << G4endl; //gives the position of the detector that detected a hit
-	#endif
+	G4int detName = physVol->GetCopyNo();//GetName();
+
+//	#ifndef G4MULTITHREADED
+//	G4cout << "Detector Position:" << posDetector << G4endl; //gives the position of the detector that detected a hit
+//	#endif
 
 	G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
-
+	if(particleName == "e+"){
 	G4AnalysisManager *man = G4AnalysisManager::Instance(); 
+
 /*
 	man->FillNtupleIColumn(0, 0, evt);
 	man->FillNtupleDColumn(0, 1, posPhoton[0]);
@@ -57,7 +60,11 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 	man->FillNtupleDColumn(1, 3, posDetector[2]);
 */
 	man->FillNtupleSColumn(0, 0, particleName);
+	man->FillNtupleDColumn(0, 1, posDetector[2]);
+	//man->FillNtupleDColumn(0, 2, nrg);
+	//man->FillNtupleDColumn(0, 3, wlen);
 	man->AddNtupleRow(0);
+	}
 
 	return true;
 }

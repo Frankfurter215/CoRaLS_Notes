@@ -2,7 +2,7 @@
 
 MyRunAction::MyRunAction()
 {
-	G4AnalysisManager *man = G4AnalysisManager::Instance();
+//	G4AnalysisManager *man = G4AnalysisManager::Instance();
 /*
 	man->CreateNtuple("Photons", "Photons");
 	man->CreateNtupleIColumn("fEvent"); //stands for Integer column
@@ -12,15 +12,15 @@ MyRunAction::MyRunAction()
 	man->CreateNtupleDColumn("fwlen"); //shows wavelength
 	man->FinishNtuple(0); //this first set (ntuple) is labelled as number 0
 */
-	man->CreateNtuple("Hits", "Hits");
+//	man->CreateNtuple("Hits", "Hits");
 /*
 	man->CreateNtupleIColumn("fEvent"); //stands for Integer column
 	man->CreateNtupleDColumn("fX");
 	man->CreateNtupleDColumn("fY");
 	man->CreateNtupleDColumn("fZ"); //these show position
 */
-	man->CreateNtupleSColumn("partNames");
-	man->FinishNtuple(0); //this second set (ntuple) is labelled as number 1
+//	man->CreateNtupleSColumn("partNames");
+//	man->FinishNtuple(0); //this second set (ntuple) is labelled as number 1
 /*
 	man->CreateNtuple("Scoring", "Scoring");
 	man->CreateNtupleDColumn("fEdep");
@@ -35,13 +35,14 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 {
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
 
-	G4int runID = run->GetRunID();
+	man->OpenFile("output.root");
 
-	std::stringstream strRunID;
-	strRunID << runID;
-	std::cout << runID;
-	man->OpenFile("test"+strRunID.str()+".root");
-
+	man->CreateNtuple("Hits", "Hits");
+	man->CreateNtupleSColumn("partNames");
+	man->CreateNtupleDColumn("Z");
+	man->CreateNtupleDColumn("nrg");
+	man->CreateNtupleDColumn("wavelength");
+	man->FinishNtuple(0);
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)

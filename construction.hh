@@ -32,7 +32,7 @@ private:
 	G4LogicalVolume *logicDetector;
 	virtual void ConstructSDandField();
 
-	G4int nCols, nRows;
+	G4int nCols, nRows, detNum;
 
   G4Box *solidWorld, *solidRadiator, *solidDetector, *solidScintillator, *solidAtmosphere, *solidRegolith;
   G4LogicalVolume *logicWorld, *logicRadiator, *logicScintillator, *logicAtmosphere[10], *logicRegolith;

@@ -1,6 +1,7 @@
 #include "construction.hh"
 #include <iostream>
 //i hate github-> its starting to grow on me
+// testing testing testing
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
@@ -8,11 +9,9 @@ MyDetectorConstruction::MyDetectorConstruction()
 	isScintillator= false;
 	isAtmosphere = false;
 	isRegolith = true;
-	
-	detThic = 0.1*m;
 
-	nCols = 1;
-	nRows = 1;
+	nCols = 10.;
+	nRows = 10.;
 
 	fMessenger = new G4GenericMessenger(this, "/detector/", "Detector Construction");
 
@@ -24,19 +23,12 @@ MyDetectorConstruction::MyDetectorConstruction()
 
 	DefineMaterials();
 
-	if(isCherenkov)
-	{
-	xWorld = 0.5*m;
-	yWorld = 0.5*m;
-	zWorld = 0.5*m;
-	}
+	xWorld = 10.*m;
+	yWorld = 10.*m; //defining x and y width of the world volume in variables
+	zWorld = 10.*m;
 
-	if(isRegolith)
-	{
-	xWorld = 5.*m;
-	yWorld = 5.*m; //defining x and y width of the world volume in variables
-	zWorld = 5.*m;
-	}
+	detThic = 0.005*m;
+	detNum = 0.5*zWorld/detThic;
 }
 
 MyDetectorConstruction::~MyDetectorConstruction()
@@ -167,7 +159,7 @@ void MyDetectorConstruction::ConstructCherenkov()
 	{
 		for(G4int j = 0; j < nCols; j++)
 			{
-				physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 0.1*m), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
+				physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 0.9*m), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
 			}
 	}
 
@@ -196,14 +188,6 @@ void MyDetectorConstruction::ConstructAtmosphere()
      logicAtmosphere[i] = new G4LogicalVolume(solidAtmosphere, Air[i], "logicAtmosphere"); 
      physAtmosphere[i] = new G4PVPlacement(0, G4ThreeVector(0, 0, zWorld/10.*2*i - zWorld +zWorld/10.), logicAtmosphere[i], "physAtmosphere", logicWorld, false, i, true); 
   } 
-}
-void MyDetectorConstruction::ConstructRegolith()
-{
-/*
-    solidRegolith = new G4Box("solidRegolith", xWorld, yWorld, 9*zWorld/10.);
-    logicRegolith = new G4LogicalVolume(solidRegolith, Regolith, "logicRegolith");
-    physRegolith = new G4PVPlacement(0, G4ThreeVector(0., 0., -zWorld/10.), logicRegolith, "physRegolith", logicWorld, false, 0, true);
-*/
 	solidDetector = new G4Box("solidDetector", xWorld/nRows, yWorld/nCols, detThic); // (half width, half length, half thickness)
 
 	logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicDetector");//for this example it consists of world material
@@ -211,10 +195,25 @@ void MyDetectorConstruction::ConstructRegolith()
 	physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., zWorld-detThic), logicDetector, "physDetector", logicWorld, false, 0, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
 
 }
+void MyDetectorConstruction::ConstructRegolith() ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+/*
+    solidRegolith = new G4Box("solidRegolith", xWorld, yWorld, 9*zWorld/10.);
+    logicRegolith = new G4LogicalVolume(solidRegolith, Regolith, "logicRegolith");
+    physRegolith = new G4PVPlacement(0, G4ThreeVector(0., 0., -zWorld/10.), logicRegolith, "physRegolith", logicWorld, false, 0, true);
+*/
+	solidDetector = new G4Box("solidDetector", xWorld, yWorld, detThic); // (half width, half length, half thickness)
+	logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicDetector");//for this example it consists of world material
+	for(G4int i = 0; i<detNum; i++)
+	{
+	physDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., zWorld -detThic - detThic*2*i), logicDetector, "physDetector", logicWorld, false, i, true);//j+i*10 means when i=0, j = 0-9 then you get 10-19 when i=1 and so on to get unique numbers for each detector
+	}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}
  
 void MyDetectorConstruction::ConstructSDandField()
 {
-	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
+	MySensitiveDetector *sensDet = new MySensitiveDetector("mydet");
 
     if(logicDetector != NULL)
         logicDetector->SetSensitiveDetector(sensDet);

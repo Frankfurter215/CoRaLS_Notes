@@ -4,6 +4,11 @@
 #include "G4UserRunAction.hh"
 #include "G4Run.hh"
 #include "G4AnalysisManager.hh"
+#include "G4VSensitiveDetector.hh"
+#include "G4SystemOfUnits.hh"
+#include "G4RunManager.hh"
+
+#include "G4AnalysisManager.hh"
 
 class MyRunAction : public G4UserRunAction
 {

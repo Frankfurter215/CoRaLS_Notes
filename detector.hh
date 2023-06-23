@@ -13,6 +13,8 @@ public:
 	MySensitiveDetector(G4String);
 	~MySensitiveDetector();
 
+	G4int posits, elecs;
+
 private:
 	virtual G4bool ProcessHits(G4Step *, G4TouchableHistory *);
 };
