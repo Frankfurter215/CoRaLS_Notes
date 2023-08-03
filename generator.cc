@@ -1,9 +1,56 @@
 #include "generator.hh"
 #include "G4ParticleGun.hh"
 
+
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
-	fParticleGun = new G4ParticleGun(1); //1 particle per event
+	fParticleGun = new G4ParticleGun(); // No argument for number of particles per event
+
+	G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
+
+	G4ThreeVector pos1(0., 0., 0.); 
+//	G4ThreeVector pos2(0., 0., 5e-15*m);
+//	G4ThreeVector pos3(0., 0., -5e-15*m);
+	G4ThreeVector mom(0., 0., 1); //sets momentum direction in positive set direction
+
+	// Particle 1: Charged Geantino
+	G4ParticleDefinition *particle1 = particleTable->FindParticle("proton");
+	fParticleGun->SetParticleDefinition(particle1);
+	fParticleGun->SetParticlePosition(pos1);
+	fParticleGun->SetParticleMomentumDirection(mom);
+	fParticleGun->SetParticleMomentum(10.*GeV); // Set momentum for particle 1
+/*
+	// Particle 2: Electron
+	G4ParticleDefinition *particle2 = particleTable->FindParticle("e+");
+	fParticleGun->SetParticleDefinition(particle2);
+	fParticleGun->SetParticlePosition(pos2);
+	fParticleGun->SetParticleMomentumDirection(mom);
+	fParticleGun->SetParticleMomentum(45*GeV); // Set momentum for particle 2
+
+	// Particle 3: Proton
+	G4ParticleDefinition *particle3 = particleTable->FindParticle("pi0");
+	fParticleGun->SetParticleDefinition(particle3);
+	fParticleGun->SetParticlePosition(pos3);
+	fParticleGun->SetParticleMomentumDirection(mom);
+	fParticleGun->SetParticleMomentum(45*GeV); // Set momentum for particle 3
+*/
+}
+
+MyPrimaryGenerator::~MyPrimaryGenerator()
+{
+	delete fParticleGun;
+}
+
+void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
+{
+	fParticleGun->GeneratePrimaryVertex(anEvent);
+}
+
+
+/*
+MyPrimaryGenerator::MyPrimaryGenerator()
+{
+	fParticleGun = new G4ParticleGun(1.); //1 particle per event
 
 	G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 	G4ParticleDefinition *particle = particleTable->FindParticle("chargedgeantino");
@@ -11,7 +58,7 @@ MyPrimaryGenerator::MyPrimaryGenerator()
 	// generator for regolith
 	G4ThreeVector pos(0., -8.*m, -0.);
 	G4ThreeVector mom(0., 3., 1.73);
-*/
+
 
 	//generator for cherenkov
 	G4ThreeVector pos(0., 0., 0.); //created in center of mother volume
@@ -19,7 +66,7 @@ MyPrimaryGenerator::MyPrimaryGenerator()
 
 	fParticleGun->SetParticlePosition(pos);
 	fParticleGun->SetParticleMomentumDirection(mom); //again, just sets the direction of momentum doesn't create momentum
-	fParticleGun->SetParticleMomentum(100.*GeV); //set particle at very high momentum (original units meV)
+	fParticleGun->SetParticleMomentum(100*GeV); //set particle at very high momentum (original units meV)
 	fParticleGun->SetParticleDefinition(particle);
 
 }
@@ -48,3 +95,4 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 
 	fParticleGun->GeneratePrimaryVertex(anEvent);
 }
+*/

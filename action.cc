@@ -20,5 +20,3 @@ void MyActionInitialization::Build() const
 	MyRunAction *runAction = new MyRunAction();
 	SetUserAction(runAction);
 }
-
-//this is a test

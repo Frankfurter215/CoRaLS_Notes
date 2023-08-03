@@ -7,14 +7,22 @@
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 #include "QGSP_BERT.hh"
-
+//#include "fsa_physics.cc"
 #include "construction.hh" // inclusion of detector
 #include "physics.hh" //inclusion of physics lists
 #include "action.hh" //inclusion of particle generator
+#include "Randomize.hh"
+#include <random>
 
 int main(int argc, char** argv)
 {
 	G4UIExecutive *ui = 0;
+
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	long seed = gen();
+	CLHEP::HepRandom::setTheSeed(3);
+
 
 	#ifdef G4MULTITHREADED
 		G4MTRunManager *runManager = new G4MTRunManager();
@@ -26,7 +34,7 @@ int main(int argc, char** argv)
 	runManager->SetUserInitialization(new MyPhysicsList());
 	runManager->SetUserInitialization(new MyActionInitialization());
 
-	G4VModularPhysicsList* physics = new QGSP_BERT();
+	G4VModularPhysicsList* physics = new QGSP_BERT(); 
 	physics->RegisterPhysics(new G4DecayPhysics());
 	runManager->SetUserInitialization(physics);
 

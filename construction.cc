@@ -79,7 +79,7 @@ endnew*/
 	FeO->AddElement(nist->FindOrBuildElement("Fe"), 1);
 	FeO->AddElement(nist->FindOrBuildElement("O"), 1);
 	
-	Regolith= new G4Material("Regolith", 1.5*g/cm3, 6);
+	Regolith= new G4Material("Regolith", 1.7*g/cm3, 6);//1.5gcm3
 	Regolith->AddMaterial(SiO2, 50.*perCent);
 	Regolith->AddMaterial(Al2O3, 15*perCent);
 	Regolith->AddMaterial(CaO, 10.*perCent);
@@ -215,8 +215,11 @@ void MyDetectorConstruction::ConstructSDandField()
 {
 	MySensitiveDetector *sensDet = new MySensitiveDetector("mydet");
 
-    if(logicDetector != NULL)
+    if(logicDetector != NULL){
         logicDetector->SetSensitiveDetector(sensDet);
+ //       G4UserLimits* userLimits = new G4UserLimits(1);  // Limit to one step
+   //     logicDetector->SetUserLimits(userLimits);
+    }
 
 }
 

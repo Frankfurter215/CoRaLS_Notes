@@ -551,4 +551,14 @@ CMakeFiles/sim.dir/run.cc.o: \
  /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/trkgdefs.hh \
  /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4TrackingMessenger.hh \
  /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4UserTrackingAction.hh \
- /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4RunManagerKernel.hh
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4RunManagerKernel.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/CoRaLS_Notes/generator.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4ParticleGun.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4VPrimaryGenerator.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4ParticleTable.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4Geantino.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4ChargedGeantino.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4IonTable.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/G4Ions.hh \
+ /home/hegedus.24/Desktop/beatty_lab/geant4/geant4-v11.1.1-install/include/Geant4/Randomize.hh

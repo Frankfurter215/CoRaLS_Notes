@@ -43,7 +43,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 //	#endif
 
 	G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
-	if(particleName == "e+"){
+//	if(particleName == "e-"){
 	G4AnalysisManager *man = G4AnalysisManager::Instance(); 
 
 /*
@@ -61,10 +61,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 */
 	man->FillNtupleSColumn(0, 0, particleName);
 	man->FillNtupleDColumn(0, 1, posDetector[2]);
-	//man->FillNtupleDColumn(0, 2, nrg);
-	//man->FillNtupleDColumn(0, 3, wlen);
+	man->FillNtupleDColumn(0, 2, nrg);
+//	man->FillNtupleDColumn(0, 3, wlen);
 	man->AddNtupleRow(0);
-	}
+//	}
 
 	return true;
 }
